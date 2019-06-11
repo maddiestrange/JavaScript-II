@@ -1,6 +1,22 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function basket() {
+  const crackerbox = "Box of Ritz";
+  console.log(`You are looking at a ${crackerbox}.`);
 
+  function cracker(){
+    const crackers = "round cracker";
+    console.log(`You are looking at a ${crackers} inside a ${crackerbox}.`);
+
+    function crumbs(){
+      const crumb = "small crumb";
+      console.log(`You are looking at a ${crumb} inside a ${crackers} inside a ${crackerbox}.`);
+    }
+    crumbs();
+  }
+  cracker();
+}
+basket();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
