@@ -77,8 +77,22 @@ contains('Gum',items,function(check){
 
 /* STRETCH PROBLEM */
 
+const items2 = ['Gum', 'Pencil', 'Notebook', 'yo-yo', 'Gum', 'Notebook', 'yo-yo'];
+
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  const copy = array;
+  for(let i = 0; i < copy.length; i++) {
+    for(let j = i+1; j < copy.length; j++) {
+      if(copy[i]=== copy[j]){
+      copy.splice(j, 1)
+      }
+  }
 }
+  return cb(copy)
+}
+removeDuplicates(items2, function(check){
+  console.log(check)
+});
